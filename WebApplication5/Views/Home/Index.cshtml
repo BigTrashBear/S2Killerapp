@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.Taghelpers
+
+}
+
+<h2>Welkom bij de Van Piere app</h2>
+
+<div class="container-fluid   top">
+    <div class="row">
+            <button type="submit" onclick="location.href='@Url.Action("Index", "Login")'">Go to Login</button>
+    </div>
+</div>

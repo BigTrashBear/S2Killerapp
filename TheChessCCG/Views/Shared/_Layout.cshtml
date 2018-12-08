@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <style>
+        .ul {
+            display: inline;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>a href="'@Url.Action("NewPage", "Home")'"</li>
+        </ul>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

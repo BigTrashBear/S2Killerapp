@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\vanPiereApp.Logic.csproj" />
+    <ProjectReference Include="..\vanPiereApp.Models\vanPiereApp.Models.csproj" />
+  </ItemGroup>
+
+</Project>

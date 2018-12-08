@@ -1,0 +1,188 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    <meta charset="utf-8" />
+    <style>
+        .button1 {
+            text-align: center;
+            width: 200px;
+            height: 25px;
+            background-color: white;
+        }
+        .grid {
+            display: grid;
+            padding:10px;
+
+            grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+            grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+        }
+        .tile-ally {
+            border: 1px solid #000000;
+            background-color:lightgreen
+        }
+        .tile-ally-pl {
+            border: 1px solid #000000;
+            background-color:green;
+        }
+        .tile-opp {
+            border: 1px solid #000000;
+            background-color: #ff4a4a;
+        }
+        .tile-opp-pl {
+            border: 1px solid #000000;
+            background-color:red;
+
+        }
+        .tile-neu {
+            border: 1px solid #000000;
+            background-color:gray;
+        }
+        .card {
+            width: 100px;
+            height: 50px;
+            display: grid;
+            background-color: white;
+            text-align: center;
+            text-anchor: middle;
+        }
+        #card div.ui-draggable-draggin {
+            -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+            -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+            box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+        }
+        *[draggable=true] {
+            -moz-user-select: none;
+            cursor: move;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        function fill(sender) {
+            sender.backColor = #ff0000;
+        }
+    </script>
+    
+</head>
+<body onload="Init()">
+    <div><h3>Hey ur in da gaem</h3></div>
+    <div><button class="button1" type="button" value="Go Back" onclick="location.href='@Url.Action("Index", "Home")'">Back 2 pwetty coulours</button></div>
+
+    <div class="grid">
+        <div class="card" draggable="true" onclick="fill(this)" ondragstart="grabCard" ondrop="dropCard(this)">Hi I'm card</div>
+        <div class="tile-opp-pl" droppable="true"></div>
+        <div class="tile-opp-pl" droppable="true"></div>
+        <div class="tile-opp-pl" droppable="true"></div>
+        <div class="tile-opp-pl" droppable="true"></div>
+        <div class="tile-opp-pl" droppable="true"></div>
+        <div class="tile-opp-pl" droppable="true"></div>
+        <div class="tile-opp-pl" droppable="true"></div>
+
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+        <div class="tile-opp" droppable="true"></div>
+
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+        <div class="tile-neu" droppable="true"></div>
+
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+        <div class="tile-ally" droppable="true"></div>
+
+        <div class="tile-ally-pl" droppable="true"></div>
+        <div class="tile-ally-pl" droppable="true"></div>
+        <div class="tile-ally-pl" droppable="true"></div>
+        <div class="tile-ally-pl" droppable="true"></div>
+        <div class="tile-ally-pl" droppable="true"></div>
+        <div class="tile-ally-pl" droppable="true"></div>
+        <div class="tile-ally-pl" droppable="true"></div>
+        <div class="tile-ally-pl" droppable="true"></div>
+    </div>
+</body>
+</html>
+
+

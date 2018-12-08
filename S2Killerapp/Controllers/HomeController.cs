@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
+
 namespace S2Killerapp.Controllers
 {
     public class HomeController : Controller
@@ -26,5 +28,6 @@ namespace S2Killerapp.Controllers
 
             return View();
         }
+
     }
 }

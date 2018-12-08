@@ -1,0 +1,22 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid   top">
+    <div class="row">
+        <form asp-controller="Login" asp-action="Login">
+            <div>
+                <input class="form-control " type="text" name="username" placeholder="Enter your username" />
+            </div>
+            <div>
+                <input class="form-control" type="password" name="password" placeholder="Enter your password" />
+            </div>
+            <div>
+                <button type="submit">Log In</button>
+            </div>
+        </form>
+    </div>
+</div>
+
